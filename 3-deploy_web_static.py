@@ -10,7 +10,7 @@ env.hosts = ["54.226.25.83", "100.24.238.203"]
 
 
 def do_pack():
-    """A function that generates a .tgz archive"""
+    """A function which generates a .tgz archive"""
     try:
         file_name = "versions/web_static_{}.tgz".format(time.strftime("%Y%m%d%H%M%S"))
         if isdir("versions") is False:
