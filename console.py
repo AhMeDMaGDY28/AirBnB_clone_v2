@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines the HBNB console."""
 import cmd
+from os import system
 from shlex import split
 from models import storage
 from datetime import datetime
@@ -14,7 +15,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter."""
+    """Defines the Holberton HBnB command interpreter."""
 
     prompt = "(hbnb) "
     __classes = {
@@ -201,6 +202,10 @@ class HBNBCommand(cmd.Cmd):
         except ValueError:
             print("** value missing **")
 
+    def do_clear(self, args):
+        """Clears the console screen"""
+        system("clear")
+
     def count(self, line):
         """count the number of instances of a class
         """
@@ -240,6 +245,10 @@ class HBNBCommand(cmd.Cmd):
         new_str = args[1][args[1].find('(')+1:args[1].find(')')]
         new_list.append(" ".join(new_str.split(", ")))
         return " ".join(i for i in new_list)
+
+    def do_exit(self, line):
+        """Exit the console."""
+        return True
 
     def default(self, line):
         """retrieve all instances of a class and
