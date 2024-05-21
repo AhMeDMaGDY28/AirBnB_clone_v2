@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"a script to run Hello_hBNB"
 
 from flask import Flask
 
