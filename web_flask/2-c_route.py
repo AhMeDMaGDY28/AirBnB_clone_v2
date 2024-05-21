@@ -19,6 +19,13 @@ def HBNB():
     return "HBNB"
 
 
+@app.route('/c/<text>', strict_slashes=False)
+def c_is_fun(text):
+    """shows what you wrote"""
+    new_text = text.replace('_', ' ')
+    return f"c {new_text}"
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
     # to run the flask app with all hosts and in specific port
