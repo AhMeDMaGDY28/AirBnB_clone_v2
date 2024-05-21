@@ -4,7 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def sayhello():
 	"""a func to say hello in html"""
 	return "Hello HBNB!"
