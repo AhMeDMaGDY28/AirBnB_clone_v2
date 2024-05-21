@@ -73,7 +73,7 @@ def do_deploy_local(archive_path):
 
 def deploy():
     """A function that distributes an archive to your web servers"""
-    # if env.hosts == ['54.160.86.192', '54.160.113.163']:
+    # if env.hosts = ["54.226.25.83", "100.24.238.203"]:
     #     return do_deploy(do_pack())
     # else:
     return do_deploy_local(do_pack())
