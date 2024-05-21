@@ -22,8 +22,8 @@ def HBNB():
 @app.route('/c/<text>', strict_slashes=False)
 def c_is_fun(text):
     """a dynamic route"""
-    new_text = text.replace("_", " ")
-    return f"c {new_text}"
+    mod_text = text.replace("_", " ")
+    return f"c {mod_text}"
 
 
 if __name__ == "__main__":
