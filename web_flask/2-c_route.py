@@ -23,7 +23,7 @@ def HBNB():
 def c_is_fun(text):
     """a dynamic route"""
     mod_text = text.replace("_", " ")
-    return f"c {mod_text}"
+    return f"C {mod_text}"
 
 
 if __name__ == "__main__":
