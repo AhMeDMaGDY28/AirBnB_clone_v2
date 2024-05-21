@@ -38,13 +38,11 @@ def python_route(text="is_cool"):
     return f"Python {mod_text}"
 
 
-
 # the number dynamic route
 @app.route('/number/<int:n>', strict_slashes=False)
 def int_route(n):
     """integer dynamic route"""
     return f"{n} is a number"
-
 
 
 # the number dynamic route
@@ -54,15 +52,15 @@ def int_route2(n):
     return render_template("5-number.html", n=n)
 
 
-
 # the odd/even dynamic route
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def odd_even(n):
     """ odd/even dynamic route"""
     o = "odd"
     if n % 2 == 0:
-        o = "even" 
+        o = "even"
     return render_template("6-number_odd_or_even.html", n=n, o=o)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
