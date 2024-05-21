@@ -7,14 +7,16 @@ from flask import Flask
 app = Flask(__name__)
 
 
+# the home route
 @app.route('/', strict_slashes=False)
-def master():
+def home_route():
     """Display 'Hello HBNB!"""
     return "Hello HBNB"
 
 
+# the HBNB route
 @app.route('/hbnb', strict_slashes=False)
-def HBNB():
+def HBNB_route():
     """Display 'HBNB!"""
     return "HBNB"
 
