@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def main_menu():
+def master():
     """Display 'Hello HBNB!'"""
     return "Hello HBNB!"
 

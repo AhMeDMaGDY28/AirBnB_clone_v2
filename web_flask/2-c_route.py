@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def main_menu():
+def master():
     """Display 'Hello HBNB!"""
     return "Hello HBNB"
 
@@ -27,5 +27,6 @@ def c_is_fun(text):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
     # to run the flask app with all hosts and in specific port
+    app.run(host='0.0.0.0', port=5000)
+    
