@@ -14,11 +14,9 @@ def home_route():
 
 # the states route
 @app.route('/states_list', strict_slashes=False)
-def data_to_html_route():
+def states_to_html_route():
     """open the data to view it in html"""
-
     states = storage.all(State).values()
-
     sorted_states = sorted(states, key=lambda state: state.name)
     return render_template("7-states_list.html", states=sorted_states)
 

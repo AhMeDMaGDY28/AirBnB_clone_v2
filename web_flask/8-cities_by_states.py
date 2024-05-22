@@ -10,7 +10,7 @@ app = Flask(__name__)
 def teardown_db(exception):
     """Closes the storage on teardown"""
     storage.close()
-
+# the city and state route
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
     """Displays a HTML page with states and cities"""
@@ -19,3 +19,4 @@ def cities_by_states():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+    # to run the flask app with all hosts and in specific port
