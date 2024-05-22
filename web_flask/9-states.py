@@ -13,7 +13,6 @@ def shutdown_session(exception=None):
     storage.close()
 
 
-# the states route
 @app.route('/states', strict_slashes=False)
 @app.route('/states/<state_id>', strict_slashes=False)
 def states(state_id=None):
@@ -21,7 +20,8 @@ def states(state_id=None):
     states = storage.all("State")
     if state_id is not None:
         state_id = 'State.' + state_id
-    return render_template('9-states.html', states=states, state_id=state_id)
+    return render_template(
+        '9-states.html', states=states, state_id=state_id)
 
 
 if __name__ == "__main__":
