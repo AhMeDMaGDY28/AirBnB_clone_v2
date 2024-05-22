@@ -12,6 +12,7 @@ def shutdown_session(exception=None):
     """reload storage after each request"""
     storage.close()
 
+
 # the states route
 @app.route('/states', strict_slashes=False)
 @app.route('/states/<state_id>', strict_slashes=False)

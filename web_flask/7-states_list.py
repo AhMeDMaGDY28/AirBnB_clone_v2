@@ -7,10 +7,12 @@ from models.state import State
 
 app = Flask(__name__)
 
+
 # the home route
 @app.route('/')
 def home_route():
-    return "HBNB is the best"
+    return "HBNB is good"
+
 
 # the states route
 @app.route('/states_list', strict_slashes=False)

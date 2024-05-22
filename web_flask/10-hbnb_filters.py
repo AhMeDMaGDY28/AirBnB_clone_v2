@@ -18,7 +18,8 @@ def hbnb_filters():
     """list states of each state sorted by name"""
     states = storage.all("State")
     amenities = storage.all("Amenity")
-    return render_template('10-hbnb_filters.html', states=states, amenities=amenities)
+    return render_template(
+        '10-hbnb_filters.html', states=states, amenities=amenities)
 
 
 if __name__ == "__main__":
