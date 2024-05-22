@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""sumary_line"""
+"""a simple flask app"""
 
 from flask import Flask, render_template
 from models import storage
@@ -7,12 +7,12 @@ from models.state import State
 
 app = Flask(__name__)
 
-
+# the home route
 @app.route('/')
 def home_route():
     return "HBNB is the best"
 
-
+# the states route
 @app.route('/states_list', strict_slashes=False)
 def data_to_html_route():
     """open the data to view it in html"""
